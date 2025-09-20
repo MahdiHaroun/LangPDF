@@ -3,38 +3,42 @@
 
 
 Chat with your PDF documents using AI-powered Retrieval-Augmented Generation (RAG).A production-ready Retrieval-Augmented Generation (RAG) pipeline with conversational memory for chatting with PDF documents. Built with LangChain, FastAPI, Streamlit, and includes a Chrome extension frontend.
-
-
-
-## Features[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+[![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)](https://reactjs.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)](https://fastapi.tiangolo.com)
-
-- 📄 Upload and chat with PDF documents[![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)](https://reactjs.org)
-
-- 💬 Conversational AI with memory[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=flat&logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/)
-
-- 🌐 Multiple interfaces: Chrome Extension, Web App, API
-
-- 📚 Source citations from documents## 🚀 Features
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=flat&logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/)
 
 
 
-## Quick Start- 📄 **PDF Document Processing**: Smart chunking and text extraction
-
-- 🧠 **Vector Embeddings**: FAISS-powered similarity search
-
-### 1. Setup- 💬 **Conversational AI**: Chat with documents using memory
-
-```bash- 🌐 **Multiple Interfaces**: Streamlit web app, FastAPI, and Chrome extension
-
-# Install dependencies- 🔄 **Production Ready**: Error handling, CORS, and proper architecture
-
-pip install -r requirements.txt- 📚 **Source Citations**: See relevant document excerpts for each answer
+## Features
 
 
 
-# Create .env file with your API keys## 🎯 Available Interfaces
+-  Upload and chat with PDF documents
+
+-  Conversational AI with memory
+
+-  Multiple interfaces: Chrome Extension, Web App, API
+
+-  Source citations from documents## 🚀 Features
+
+
+
+## Quick Start-  **PDF Document Processing**: Smart chunking and text extraction
+
+-  **Vector Embeddings**: FAISS-powered similarity search
+
+### 1. Setup-  **Conversational AI**: Chat with documents using memory
+
+```bash-  **Multiple Interfaces**: Streamlit web app, FastAPI, and Chrome extension
+
+# Install dependencies-  **Production Ready**: Error handling, CORS, and proper architecture
+
+pip install -r requirements.txt-  **Source Citations**: See relevant document excerpts for each answer
+
+
+
+# Create .env file with your API keys##  Available Interfaces
 
 GROQ_API_KEY=your_groq_api_key_here
 
@@ -152,8 +156,6 @@ LangPDF/### Option 1: Chrome Extension (Most Convenient)
 
    - Click the extension icon and upload a PDF!
 
-## License
-
 ### Option 2: Streamlit Interface
 
 MIT License - Feel free to use and modify!
@@ -219,21 +221,13 @@ curl -X POST "http://localhost:8000/chat/" \
 }
 ```
 
-## 🤝 Contributing
 
-1. **Fork** the repository
-2. **Create** a feature branch: `git checkout -b feature-name`
-3. **Commit** your changes: `git commit -m 'Add feature'`
-4. **Push** to branch: `git push origin feature-name`
-5. **Submit** a pull request
 
-## 📄 License
 
 This project is part of the RAG learning series and is provided for educational purposes.
 
 ---
 
-**Made with ❤️ for the AI/ML community**
 
 ## 🏗️ Project Architecture
 
@@ -295,7 +289,7 @@ LangPDF/
 - **Chunk Size**: 1000 characters with 100 overlap
 - **Max File Size**: 10MB for uploads
 
-## 🧪 Testing & Usage
+## Testing & Usage
 
 ### Chrome Extension Testing
 1. Build and install the extension (see Quick Start)
@@ -395,265 +389,5 @@ history_strings = [msg.content for msg in updated_history]
     ]
 }
 ```
-
-
-## Production Considerations
-
-- ✅ Fixed deprecated imports
-- ✅ Proper environment variable handling
-- ✅ Error handling for missing dependencies
-- ✅ Session state management
-- ✅ Path resolution fixes
-- ✅ API validation with Pydantic models
-
-
-# Frontend
-# RAG PDF Chrome Extension
-
-A Chrome extension frontend for the RAG PDF Chat Assistant, providing a convenient popup interface to chat with your PDF documents using AI-powered retrieval-augmented generation.
-
-## Features
-
-- 🏠 **Popup Interface**: Compact 400x600px popup for easy access
-- 📄 **PDF Upload**: Drag-and-drop or click to upload PDF documents
-- 💬 **Real-time Chat**: Interactive chat interface with conversation history
-- 📚 **Source Citations**: View relevant document excerpts for each response
-- 🔄 **Server Status**: Automatic backend connection monitoring
-- 💾 **Session Persistence**: Maintains chat state during browser session
-- 🎨 **Modern UI**: Clean, responsive design with emoji indicators
-
-## Prerequisites
-
-1. **Backend Server**: The RAG PDF backend must be running on `localhost:8000`
-   ```bash
-   cd /path/to/LangPDF
-   python main.py
-   ```
-
-2. **Node.js**: Version 16 or higher for building the extension
-
-## Installation & Setup
-
-### 1. Install Dependencies
-
-```bash
-cd chrome-extension
-npm install
-```
-
-### 2. Build the Extension
-
-```bash
-# Development build with watch mode
-npm run dev
-
-# Production build
-npm run build
-```
-
-### 3. Load in Chrome
-
-1. Open Chrome and navigate to `chrome://extensions/`
-2. Enable "Developer mode" (toggle in top-right)
-3. Click "Load unpacked"
-4. Select the `chrome-extension/dist` folder
-5. The extension should appear in your extensions list
-
-### 4. Pin the Extension
-
-1. Click the puzzle piece icon in Chrome toolbar
-2. Find "RAG PDF Chat Assistant"
-3. Click the pin icon to keep it visible
-
-## Usage
-
-### Starting a Chat Session
-
-1. **Start Backend**: Ensure the Python backend is running (`python main.py`)
-2. **Click Extension**: Click the extension icon in Chrome toolbar
-3. **Upload PDF**: Drag & drop or click to select a PDF file
-4. **Process**: Click "🚀 Process Document" and wait for confirmation
-5. **Chat**: Type your questions in the chat input and press Enter
-
-### Interface Overview
-
-```
-┌─────────────────────────────────┐
-│ 🤖 RAG PDF Chat                │ ← Header
-│ Chat with documents using AI    │
-├─────────────────────────────────┤
-│ ✅ Document ready for chat      │ ← Status Bar
-├─────────────────────────────────┤
-│ 📁 Upload PDF Document         │ ← Upload Section
-│ [Drag & Drop Area]              │
-│ [🚀 Process Document]           │
-├─────────────────────────────────┤
-│ 💬 Chat Messages                │ ← Chat Area
-│ User: How does this work?       │
-│ AI: Based on the document...    │
-│ 📚 Sources: [excerpts]          │
-├─────────────────────────────────┤
-│ [Type your message...] [✈️]     │ ← Input Area
-└─────────────────────────────────┘
-```
-
-### Features in Detail
-
-#### PDF Upload
-- **Supported Format**: PDF files only
-- **Size Limit**: 10MB maximum
-- **Upload Methods**: Drag & drop or file picker
-- **Processing**: Real-time progress and status updates
-
-#### Chat Interface
-- **Real-time**: Instant responses from AI
-- **History**: Maintains conversation context
-- **Sources**: Shows relevant document excerpts
-- **Scrolling**: Auto-scrolls to latest messages
-- **Input**: Multi-line support with Shift+Enter
-
-#### Status Indicators
-- 🔄 Checking server status
-- ❌ Server offline
-- 📄 Upload a PDF to get started
-- ✅ Document ready for chat
-
-## Development
-
-### Project Structure
-
-```
-chrome-extension/
-├── manifest.json           # Extension configuration
-├── package.json           # NPM dependencies
-├── webpack.config.js      # Build configuration
-├── tsconfig.json         # TypeScript configuration
-└── src/
-    ├── popup/
-    │   ├── index.tsx      # Entry point
-    │   ├── App.tsx        # Main application
-    │   └── popup.html     # HTML template
-    ├── components/
-    │   ├── FileUpload.tsx # PDF upload component
-    │   └── ChatInterface.tsx # Chat UI component
-    ├── services/
-    │   └── api.ts         # API communication
-    ├── types/
-    │   └── index.ts       # TypeScript definitions
-    ├── background/
-    │   └── background.ts  # Service worker
-    └── icons/
-        └── *.png          # Extension icons
-```
-
-### API Integration
-
-The extension communicates with the FastAPI backend using these endpoints:
-
-- `POST /upload_and_process/`: Upload and process PDF documents
-- `POST /chat/`: Send chat messages and receive AI responses
-
-### Customization
-
-#### Styling
-Modify styled-components in React components for custom themes:
-
-```typescript
-const CustomButton = styled.button`
-  background-color: #your-color;
-  // ... other styles
-`;
-```
-
-#### API Configuration
-Update the API base URL in `src/services/api.ts`:
-
-```typescript
-const API_BASE_URL = 'http://your-backend-url:port';
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Extension Not Loading**
-   - Check if `dist` folder exists (run `npm run build`)
-   - Verify manifest.json syntax
-   - Check Chrome developer console for errors
-
-2. **Server Connection Failed**
-   - Ensure backend is running on `localhost:8000`
-   - Check CORS settings in FastAPI
-   - Verify network connectivity
-
-3. **File Upload Issues**
-   - Check file size (max 10MB)
-   - Ensure file is PDF format
-   - Verify backend storage permissions
-
-4. **Chat Not Working**
-   - Upload a document first
-   - Check backend logs for errors
-   - Verify API endpoints are accessible
-
-### Development Debugging
-
-1. **Extension Console**:
-   - Right-click extension icon → "Inspect popup"
-   - Check Console tab for JavaScript errors
-
-2. **Background Script**:
-   - Go to `chrome://extensions/`
-   - Click "Service worker" link under extension
-   - View logs and errors
-
-3. **Network Issues**:
-   - Open DevTools → Network tab
-   - Monitor API requests and responses
-   - Check for CORS or timeout errors
-
-## Building for Production
-
-1. **Create Production Build**:
-   ```bash
-   npm run build
-   ```
-
-2. **Package Extension**:
-   ```bash
-   # Create ZIP file for Chrome Web Store
-   cd dist
-   zip -r ../rag-pdf-extension.zip .
-   ```
-
-3. **Chrome Web Store Upload**:
-   - Visit [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole/)
-   - Upload the ZIP file
-   - Fill in store listing details
-   - Submit for review
-
-## Security Considerations
-
-- Extension only connects to `localhost:8000` by default
-- File uploads are processed locally through the backend
-- No data is sent to external services
-- Chat history is stored locally in extension storage
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-This project is part of the RAG PDF Chat Assistant and follows the same license terms.
-
-
-## License
-
-This project is part of the RAG learning series.
 
 
