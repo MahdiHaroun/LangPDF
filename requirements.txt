@@ -1,0 +1,13 @@
+langchain 
+langchain_groq
+langchain_huggingface
+faiss-cpu
+pypdf
+python-dotenv
+sentence-transformers
+langchain_community
+chromadb
+fastapi 
+uvicorn
+python-multipart
+requests
